@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Kumbh+Sans:wght@400;700&family=Manrope:wght@800&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    hsl(232, 19%, 15%) 0%,
+    hsl(232, 19%, 15%) 33%,
+    hsl(230, 17%, 14%) 0%,
+    hsl(230, 17%, 14%) 60%
+  );
+}
+body.dark-mode {
+  background: linear-gradient(
+    to bottom,
+    hsl(225, 100%, 98%) 0%,
+    hsl(225, 100%, 98%) 33%,
+    hsl(0, 0%, 100%) 0%,
+    hsl(0, 0%, 100%) 60%
+  );
+}
+/* mainContainer Styles starts from over here */
+.mainContainer {
+  width: 1020px;
+  height: 100vh;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+/* mainContainer Styles Ends here */
+
+/* Header_container starts from over here */
+.Header_Container {
+  width: 100%;
+  padding: 1rem;
+}
+/* Header_container ends here */
+
+/* Header starts from over here */
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+/* Header_container ends over here */
+
+/* HeaderContent1 h4  Starts from over here */
+.HeaderContent1 h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+
+  /* HeaderContent1 h4  Ends here */
+}
+
+/* HeaderContent1 p Starts from over here */
+.HeaderContent1 p {
+  color: hsl(228, 34%, 66%);
+  font-size: 10px;
+  font-weight: 700;
+}
+/* HeaderContent1 p Ends here */
+/* HeaderContent2 Starts from over here */
+.HeaderContent2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+/* HeaderContent2 Ends here */
+/* HeaderContent2 h6 Starts from over here */
+.HeaderContent2 h6 {
+  font-size: 14px;
+  font-weight: 700;
+  color: hsl(228, 34%, 66%);
+}
+
+/* HeaderContent2 h6 Ends here */
+
+/* Divider_line Starts from over here */
+.divider_line {
+  display: none;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 1rem;
+}
+
+/* Divider_line Ends here */
+/* Toggle Button starts from over here*/
+
+.toggle_button {
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  padding: 0.5rem;
+  width: 50px;
+  height: 40px;
+  border-radius: 10px;
+}
+/* Toggle Button Ends here*/
+/* HeaderComponent Media Starts from over here */
+@media (max-width: 647px) {
+  .mainContainer {
+    width: 100%;
+    padding: 0.2rem;
+  }
+  .Header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .HeaderContent1 {
+    width: 100%;
+    margin-bottom: 1.6rem;
+  }
+  .HeaderContent2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0px;
+  }
+  .divider_line {
+    display: block;
+    width: 100%;
+    border: 1px;
+    opacity: 0.4;
+    background-color: hsl(228, 34%, 66%);
+    margin-bottom: 1.4rem;
+  }
+  .HeaderContent1 h4 {
+    font-size: 23px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+  .HeaderContent1 p {
+    color: hsl(228, 34%, 66%);
+    font-size: 14px;
+    font-weight: 700;
+  }
+  body {
+    background: linear-gradient(
+      to bottom,
+      hsl(232, 19%, 15%) 0%,
+      hsl(232, 19%, 15%) 68%,
+      hsl(230, 17%, 14%) 0%,
+      hsl(230, 17%, 14%) 60%
+    );
+  }
+  body.dark-mode {
+    background: linear-gradient(
+      to bottom,
+      hsl(225, 100%, 98%) 0%,
+      hsl(225, 100%, 98%) 68%,
+      hsl(0, 0%, 100%) 0%,
+      hsl(0, 0%, 100%) 60%
+    );
+  }
+}
+/* HeaderComponent Media Ends here */
+
+/*UserComponent Styles Starts From over here */
+.card_groups {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* Two columns of equal width */
+  grid-gap: 30px; /* Gap between grid items */
+  padding: 1rem;
+}
+
+.card_1 {
+  width: 217px;
+  height: 190px;
+  border-radius: 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+  flex-direction: column;
+  transition: 0.2s linear;
+}
+
+.card_header_color {
+  height: 3px;
+  width: 100%;
+  background-color: hsl(208, 92%, 53%);
+}
+.card2_header_color {
+  height: 3px;
+  width: 100%;
+  background-color: hsl(203, 89%, 53%);
+}
+.card3_header_color {
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+.card4_header_color {
+  height: 3px;
+  width: 100%;
+  background-color: hsl(356, 69%, 56%);
+}
+.card_content1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+.icon {
+  color: hsl(208, 92%, 53%);
+}
+.icon1_card2 {
+  color: hsl(203, 89%, 53%);
+}
+.icon1_card3 {
+  color: hsl(329, 70%, 58%);
+}
+.icon1_card4 {
+  color: hsl(356, 69%, 56%);
+}
+.card_content1 p {
+  font-size: 13px;
+  font-weight: 700;
+}
+.card_content2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card_content2 h5 {
+  font-size: 39px;
+  font-weight: 700;
+}
+.card_content2 p {
+  letter-spacing: 0.2rem;
+  font-size: 13px;
+  color: hsl(228, 34%, 66%);
+}
+.card_content3 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 2px;
+}
+.icon2 {
+  color: hsl(163, 72%, 41%);
+  width: 12px;
+  height: 12px;
+}
+.card_content3 p {
+  color: hsl(163, 72%, 41%);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+@media (max-width: 670px) {
+  .card_groups {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr; /* Two columns of equal width */
+    grid-gap: 30px; /* Gap between grid items */
+  }
+  .card_1 {
+    width: 100%;
+  }
+}
+/*UserComponent Styles ends here */
+/* OverviewComponent styles starts from over here */
+.Overview_main {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 1rem;
+}
+.Overview_main h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+.card {
+  width: 217px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0.8rem;
+  border-radius: 5%;
+  flex-direction: column;
+  gap: 20px;
+  transition: 0.2s linear;
+}
+
+.content1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content1 p {
+  font-size: 13px;
+  font-weight: 700;
+}
+.content2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2px;
+}
+
+.content2 h4 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.content3 p {
+  color: hsl(163, 72%, 41%);
+  font-size: 13px;
+  font-weight: 700;
+}
+.content3 .text {
+  color: hsl(356, 69%, 56%);
+  font-size: 13px;
+  font-weight: 700;
+}
+.OverView_grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* Two columns of equal width */
+  grid-gap: 30px; /* Gap between grid items */
+}
+@media (max-width: 670px) {
+  .OverView_grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr; /* Two columns of equal width */
+    grid-gap: 30px; /* Gap between grid items */
+  }
+  .card {
+    width: 100%;
+  }
+}
+.red_icon {
+  color: hsl(356, 69%, 56%);
+  width: 12px;
+  height: 12px;
+}
+
+.header_toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* OverviewComponent styles ends here */
