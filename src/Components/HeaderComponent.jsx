@@ -1,12 +1,22 @@
 // eslint-disable-next-line react/prop-types
 const HeaderComponent = ({ dark, setDarkMode }) => {
+  {
+    /* handleClick function starts from over here */
+  }
   const handleClick = () => {
     setDarkMode(!dark);
   };
+
+  {
+    /* handleClick function starts from over here */
+  }
   return (
     <>
+      {/* Header Container Starts From over here */}
       <div className="Header_Container">
+        {/* Header Starts From over here */}
         <div className="Header">
+          {/* Header Content1 Starts From over here */}
           <div className="HeaderContent1">
             <h4
               style={{
@@ -17,6 +27,10 @@ const HeaderComponent = ({ dark, setDarkMode }) => {
             </h4>
             <p>Total Followers: 23,004</p>
           </div>
+
+          {/* Header Content1 ends over here */}
+
+          {/* divider line starts from  over here */}
           <div
             className="divider_line"
             style={{
@@ -25,6 +39,10 @@ const HeaderComponent = ({ dark, setDarkMode }) => {
                 : "hsl(228, 34%, 66%)",
             }}
           ></div>
+
+          {/* divider line ends over here */}
+
+          {/*  Header Content2 starts from over here */}
           <div className="HeaderContent2">
             <h6
               style={{
@@ -43,8 +61,13 @@ const HeaderComponent = ({ dark, setDarkMode }) => {
               <label htmlFor="checkbox" className="switch"></label>
             </div>
           </div>
+
+          {/*  Header Content2 ends over here */}
         </div>
+
+        {/* Header ends over here */}
       </div>
+      {/* Header Container Starts From over here */}
       <style>
         {`
           .switch {

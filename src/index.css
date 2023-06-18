@@ -168,6 +168,8 @@ body.dark-mode {
 /* HeaderComponent Media Ends here */
 
 /*UserComponent Styles Starts From over here */
+
+/* Card groups starts from over here */
 .card_groups {
   width: 100%;
   display: grid;
@@ -175,6 +177,9 @@ body.dark-mode {
   grid-gap: 30px; /* Gap between grid items */
   padding: 1rem;
 }
+/* Card groups ends here */
+
+/* Card_1 starts from over here */
 
 .card_1 {
   width: 217px;
@@ -187,6 +192,7 @@ body.dark-mode {
   flex-direction: column;
   transition: 0.2s linear;
 }
+/* Card_1 ends over here */
 
 .card_header_color {
   height: 3px;
