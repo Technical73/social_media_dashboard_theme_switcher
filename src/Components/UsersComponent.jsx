@@ -1,5 +1,5 @@
-import { GrFacebook, GrInstagram } from "react-icons/Gr";
-import { BsTwitter, BsYoutube } from "react-icons/Bs";
+import { GrFacebook, GrInstagram } from "react-icons/gr";
+import { BsTwitter, BsYoutube } from "react-icons/bs";
 import { BiUpArrow, BiCaretDown } from "react-icons/bi";
 import { useState } from "react";
 

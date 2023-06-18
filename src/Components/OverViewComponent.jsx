@@ -1,6 +1,6 @@
-import { GrFacebook, GrInstagram } from "react-icons/Gr";
+import { GrFacebook, GrInstagram } from "react-icons/gr";
 import { BiUpArrow, BiCaretDown } from "react-icons/bi";
-import { BsYoutube, BsTwitter } from "react-icons/Bs";
+import { BsYoutube, BsTwitter } from "react-icons/bs";
 import { useState } from "react";
 // eslint-disable-next-line react/prop-types
 const OverViewComponent = ({ dark }) => {
