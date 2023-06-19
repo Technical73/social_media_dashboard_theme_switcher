@@ -11,7 +11,6 @@ const UsersComponent = ({ dark }) => {
   const [hovered4, setHovered4] = useState(false);
   const cardStyle = {
     backgroundColor: dark ? "hsl(227, 47%, 96%)" : "hsl(228, 28%, 20%)",
-    transition: "0.2s linear",
     cursor: "pointer",
   };
 
