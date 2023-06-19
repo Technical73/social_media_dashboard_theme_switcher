@@ -58,7 +58,10 @@ const HeaderComponent = ({ dark, setDarkMode }) => {
                 id="checkbox"
                 onClick={handleClick}
               />
-              <label htmlFor="checkbox" className="switch"></label>
+              <label
+                htmlFor="checkbox"
+                className={`switch ${dark ? "dark" : ""}`}
+              ></label>
             </div>
           </div>
 
@@ -68,50 +71,6 @@ const HeaderComponent = ({ dark, setDarkMode }) => {
         {/* Header ends over here */}
       </div>
       {/* Header Container Starts From over here */}
-      <style>
-        {`
-          .switch {
-            position: relative;
-            display: inline-block;
-            width: 3rem;
-            height: 1.5rem;
-            border-radius: 0.75rem;
-            background: ${
-              dark === false &&
-              "linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%))"
-            };
-            background-color:${dark === true && "hsl(230, 22%, 74%)"}; 
-            transition: all 0.3s linear;
-          }
-          .switch::after {
-            content: "";
-            position: absolute;
-            top: 0.1rem;
-            left: 0.1rem;
-            width: 1.3rem;
-            height: 1.3rem;
-            border-radius: 50%;
-            transition: all 0.3s linear;
-            background-color: ${
-              dark ? "hsl(225, 100%, 98%)" : "hsl(230, 17%, 14%)"
-            };
-          }
-          .header_toggle input[type="checkbox"] {
-            display: none;
-          }
-          .header_toggle input[type="checkbox"]:checked + .switch::after {
-            transform: translateX(1.4rem);
-          }
-          .switch:hover {
-            background: ${dark === true && "hsl(208, 92%, 53%)"};
-            background-color: ${
-              dark === false &&
-              "linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%))"
-            };
-            cursor: pointer;
-          }
-        `}
-      </style>{" "}
     </>
   );
 };

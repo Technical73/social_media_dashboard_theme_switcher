@@ -1,40 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Kumbh+Sans:wght@400;700&family=Manrope:wght@800&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+/* body dark mode starts from here */
 body {
+  background-color: hsl(230, 17%, 14%);
+  position: relative;
   height: 100vh;
-  background: linear-gradient(
-    to bottom,
-    hsl(232, 19%, 15%) 0%,
-    hsl(232, 19%, 15%) 33%,
-    hsl(230, 17%, 14%) 0%,
-    hsl(230, 17%, 14%) 60%
-  );
 }
+
+/* body dark mode ends here */
+
+/* body light mode starts from here */
+
 body.dark-mode {
-  background: linear-gradient(
-    to bottom,
-    hsl(225, 100%, 98%) 0%,
-    hsl(225, 100%, 98%) 33%,
-    hsl(0, 0%, 100%) 0%,
-    hsl(0, 0%, 100%) 60%
-  );
+  background-color: hsl(0, 0%, 100%);
+  position: relative;
+  height: 100vh;
 }
+
+/* body light mode ends here */
+.top_bg {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 210px;
+  z-index: -1;
+}
+
 /* mainContainer Styles starts from over here */
 .mainContainer {
   width: 1020px;
   height: 100vh;
-  min-height: 100vh;
   margin: 0 auto;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 }
 /* mainContainer Styles Ends here */
 
@@ -106,66 +117,6 @@ body.dark-mode {
   border-radius: 10px;
 }
 /* Toggle Button Ends here*/
-/* HeaderComponent Media Starts from over here */
-@media (max-width: 647px) {
-  .mainContainer {
-    width: 100%;
-    padding: 0.2rem;
-  }
-  .Header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .HeaderContent1 {
-    width: 100%;
-    margin-bottom: 1.6rem;
-  }
-  .HeaderContent2 {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 0px;
-  }
-  .divider_line {
-    display: block;
-    width: 100%;
-    border: 1px;
-    opacity: 0.4;
-    background-color: hsl(228, 34%, 66%);
-    margin-bottom: 1.4rem;
-  }
-  .HeaderContent1 h4 {
-    font-size: 23px;
-    color: hsl(0, 0%, 100%);
-    font-weight: 700;
-    margin-bottom: 0.3rem;
-  }
-  .HeaderContent1 p {
-    color: hsl(228, 34%, 66%);
-    font-size: 14px;
-    font-weight: 700;
-  }
-  body {
-    background: linear-gradient(
-      to bottom,
-      hsl(232, 19%, 15%) 0%,
-      hsl(232, 19%, 15%) 68%,
-      hsl(230, 17%, 14%) 0%,
-      hsl(230, 17%, 14%) 60%
-    );
-  }
-  body.dark-mode {
-    background: linear-gradient(
-      to bottom,
-      hsl(225, 100%, 98%) 0%,
-      hsl(225, 100%, 98%) 68%,
-      hsl(0, 0%, 100%) 0%,
-      hsl(0, 0%, 100%) 60%
-    );
-  }
-}
-/* HeaderComponent Media Ends here */
 
 /*UserComponent Styles Starts From over here */
 
@@ -195,22 +146,22 @@ body.dark-mode {
 /* Card_1 ends over here */
 
 .card_header_color {
-  height: 3px;
+  height: 4px;
   width: 100%;
   background-color: hsl(208, 92%, 53%);
 }
 .card2_header_color {
-  height: 3px;
+  height: 4px;
   width: 100%;
   background-color: hsl(203, 89%, 53%);
 }
 .card3_header_color {
-  height: 3px;
+  height: 4px;
   width: 100%;
   background: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
 }
 .card4_header_color {
-  height: 3px;
+  height: 4px;
   width: 100%;
   background-color: hsl(356, 69%, 56%);
 }
@@ -268,17 +219,6 @@ body.dark-mode {
   font-weight: 700;
 }
 
-@media (max-width: 670px) {
-  .card_groups {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr; /* Two columns of equal width */
-    grid-gap: 30px; /* Gap between grid items */
-  }
-  .card_1 {
-    width: 100%;
-  }
-}
 /*UserComponent Styles ends here */
 /* OverviewComponent styles starts from over here */
 .Overview_main {
@@ -351,7 +291,190 @@ body.dark-mode {
   grid-template-columns: 1fr 1fr 1fr 1fr; /* Two columns of equal width */
   grid-gap: 30px; /* Gap between grid items */
 }
-@media (max-width: 670px) {
+
+.red_icon {
+  color: hsl(356, 69%, 56%);
+  width: 12px;
+  height: 12px;
+}
+
+/* OverviewComponent styles ends here */
+
+/* toggle styles starts from over here */
+.header_toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  transition: all 0.3s linear;
+}
+
+.switch.dark {
+  background: hsl(230, 22%, 74%);
+}
+
+.switch::before {
+  content: "";
+  position: absolute;
+  top: 0.1rem;
+  right: 0.1rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  transition: all 0.3s linear;
+  background-color: hsl(230, 17%, 14%);
+}
+
+.switch.dark::before {
+  background-color: hsl(225, 100%, 98%);
+}
+
+.header_toggle input[type="checkbox"] {
+  display: none;
+}
+
+.header_toggle input[type="checkbox"]:checked + .switch::before {
+  transform: translateX(-1.4rem);
+}
+
+.switch:hover {
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  cursor: pointer;
+}
+
+.switch.dark:hover {
+  background: hsl(208, 92%, 53%);
+  cursor: pointer;
+}
+
+/* toggle styles ends over here */
+
+/* media queries starts from over here */
+
+/* media queries max-width: 280px starts from over here */
+@media (max-width: 280px) {
+  .top_bg {
+    height: 310px;
+  }
+  .mainContainer {
+    width: 100%;
+    padding: 0.2rem;
+  }
+  .Header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .HeaderContent1 {
+    width: 100%;
+    margin-bottom: 1.6rem;
+  }
+  .HeaderContent2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0px;
+  }
+  .divider_line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: hsl(228, 34%, 66%);
+    margin-bottom: 1.4rem;
+  }
+  .HeaderContent1 h4 {
+    font-size: 23px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+  .HeaderContent1 p {
+    color: hsl(228, 34%, 66%);
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .card_groups {
+    width: 100%;
+    grid-template-columns: 1fr; /* Change to single column */
+    grid-gap: 30px;
+  }
+  .card_1 {
+    width: 100%;
+  }
+
+  .OverView_grid {
+    width: 100%;
+    grid-template-columns: 1fr; /* Change to single column */
+    grid-gap: 30px;
+  }
+  .card {
+    width: 100%;
+  }
+}
+
+/* media queries max-width: 280px ends over here */
+
+/* media queries min-width: 281px and max-width: 767px starts from over here */
+
+@media (min-width: 281px) and (max-width: 767px) {
+  .top_bg {
+    height: 290px;
+  }
+  .mainContainer {
+    width: 100%;
+    padding: 0.2rem;
+  }
+  .Header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .HeaderContent1 {
+    width: 100%;
+    margin-bottom: 1.6rem;
+  }
+  .HeaderContent2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0px;
+  }
+  .divider_line {
+    display: block;
+    width: 100%;
+    border: 1px;
+    opacity: 0.4;
+    background-color: hsl(228, 34%, 66%);
+    margin-bottom: 1.4rem;
+  }
+  .HeaderContent1 h4 {
+    font-size: 23px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+  .HeaderContent1 p {
+    color: hsl(228, 34%, 66%);
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .card_groups {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Two columns of equal width */
+    grid-gap: 30px; /* Gap between grid items */
+  }
+  .card_1 {
+    width: 100%;
+  }
+
   .OverView_grid {
     width: 100%;
     display: grid;
@@ -362,15 +485,83 @@ body.dark-mode {
     width: 100%;
   }
 }
-.red_icon {
-  color: hsl(356, 69%, 56%);
-  width: 12px;
-  height: 12px;
+
+/* media queries min-width: 281px and max-width: 767px ends over here */
+
+/* media queries min-width: 768px and max-width: 1023px starts from over here */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .top_bg {
+    height: 320px;
+  }
+  .mainContainer {
+    width: 100%;
+    padding: 0.2rem;
+  }
+  .Header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .HeaderContent1 {
+    width: 100%;
+    margin-bottom: 1.6rem;
+  }
+  .HeaderContent2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0px;
+  }
+  .divider_line {
+    display: block;
+    width: 100%;
+    border: 1px;
+    opacity: 0.4;
+    background-color: hsl(228, 34%, 66%);
+    margin-bottom: 1.4rem;
+  }
+  .HeaderContent1 h4 {
+    font-size: 23px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+  .HeaderContent1 p {
+    color: hsl(228, 34%, 66%);
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .card_groups {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+    grid-gap: 30px; /* Gap between grid items */
+  }
+  .card_1 {
+    width: 100%;
+  }
+  .OverView_grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns of equal width */
+    grid-gap: 30px; /* Gap between grid items */
+  }
+  .card {
+    width: 100%;
+  }
 }
 
-.header_toggle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* media queries min-width: 768px and max-width: 1023px ends over here */
+
+/* media queries min-width: 1024px and max-width: 1025px starts from over here */
+
+@media (min-width: 1024px) and (max-width: 1025px) {
+  .top_bg {
+    height: 220px;
+  }
 }
-/* OverviewComponent styles ends here */
+
+/* media queries min-width: 1024px and max-width: 1025px ends over here */
+
+/* media queries ends here */

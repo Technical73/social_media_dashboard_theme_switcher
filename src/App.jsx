@@ -16,6 +16,15 @@ function App() {
 
   return (
     <>
+      <div
+        className="top_bg"
+        style={{
+          backgroundColor: darkMode
+            ? "hsl(225, 100%, 98%)"
+            : "hsl(232, 19%, 15%)",
+        }}
+      ></div>
+
       <div className="mainContainer">
         <HeaderComponent dark={darkMode} setDarkMode={setDarkMode} />
         <UsersComponent dark={darkMode} />
